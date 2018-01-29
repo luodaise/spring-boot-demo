@@ -79,7 +79,17 @@ public class BookApp {
 //        return bookservice.findByDescriptionContains(description);
 //    }
 
-    public List<Book> findBy(@RequestParam int len){
-        return bookservice.findByJPQL(len);
+//    public List<Book> findBy(@RequestParam int len){
+//        return bookservice.findByJPQL(len);
+//    }
+//    public int findBy(@RequestParam int status,@RequestParam long id){
+//        return bookservice.updateByJPQL(status , id);
+//    }
+//    public int findBy(@RequestParam long id){
+//        return  bookservice.deleteByJPQL(id);
+//    }
+
+    public int findBy(@RequestParam long id,@RequestParam int status,@RequestParam long uid){
+        return bookservice.deleteAndUpdate(id,status,uid);
     }
 }

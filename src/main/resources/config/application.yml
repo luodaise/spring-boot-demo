@@ -1,4 +1,8 @@
-
+spring:
+  profiles:
+    active: dev
+  thymeleaf:
+    mode: HTML
 
 
 book:
@@ -8,7 +12,4 @@ book:
   desc: ${book.name} ,这本书还不错
 
 
-spring:
-  profiles:
-    active: dev
 
