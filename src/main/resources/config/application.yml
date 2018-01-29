@@ -1,0 +1,14 @@
+
+
+
+book:
+  name: 互联网学习
+  author: 王迪
+  isbn: ${random.uuid}
+  desc: ${book.name} ,这本书还不错
+
+
+spring:
+  profiles:
+    active: dev
+
