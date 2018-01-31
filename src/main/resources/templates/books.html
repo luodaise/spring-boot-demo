@@ -1,10 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8"/>
-    <title>books</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" href="../static/css/bootstrap.min.css" >
+    <title>书单列表</title>
 </head>
 <body>
-<h1>books list</h1>
-</body>
-</html>
+<div class="container">
+    <h2 class="page-header">书单列表</h2>
+    <div class="alert alert-success" th:unless="${#strings.isEmpty(message)}">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <strong>恭喜，</strong>
+        <span th:text="${message}">信息提交成功</span>
+    </div>
+    <p class="text-right"><a href="./input.html" th:href="@{books/input}" class="btn btn-primary">新 增</a></p>
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>书名</th>
+            <th>作者</th>
+            <th>类别</th>
+            <th>状态</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="book,iterStat:${books}" >
+            <!--interStat.count count计数 从1开始
+            //          index 索引 从0开始
+            //          size  列表总数
+            //         even/odd 偶 /奇数 th:class="${iterStat.even}? 'bg-success' "
+            //         first/last 第一条/最后一条判断 正确返回true 错误返回false  th:text="${iterStat.first}"-->
+            <td th:text="${iterStat.count}">1</td>
+            <!-- <td ><a href="#" th:text="${book.name}" th:href="@{/books/{id}(id=${book.id})}">书名</a></td>-->
+             <td ><a href="#" th:text="${book.name}" th:href="@{'/books/' + ${book.id}}">书名</a></td>
+             <td th:text="${book.author}">作者</td>
+             <td th:text="${book.description}">类别</td>
+             <td th:switch="${book.status}">
+                 <span th:case="0">不推荐</span>
+                 <span th:case="1">推荐</span>
+                 <span th:case="2">倾力推荐</span>
+                 <span th:case="*">状态</span>
+             </td>
+            <td>
+                <a href="#" th:href="@{/books/{id}/input(id=${book.id})}">修改</a>
+            </td>
+         </tr>
+         </tbody>
+     </table>
+ </div>
+
+
+
+
+
+ <script th:src="@{/js/jquery.min.js}" src="../static/js/jquery.min.js"></script>
+ <script th:src="@{/js/bootstrap.min.js}" src="../static/js/bootstrap.min.js"></script>
+ </body>
+ </html>
