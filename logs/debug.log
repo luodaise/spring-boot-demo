@@ -6214,3 +6214,53 @@ org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property o
 2018-01-30 17:18:35.951  INFO 5184 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
 2018-01-30 17:18:35.952  INFO 5184 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2018-01-30 17:18:36.006  INFO 5184 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 54 ms
+2018-01-31 14:45:54.883  INFO 12240 --- [main] c.d.s.SpringBootDemoApplication          : Starting SpringBootDemoApplication on jacob-PC with PID 12240 (D:\Spring-boot\target\classes started by jacob in D:\Spring-boot)
+2018-01-31 14:45:54.889 DEBUG 12240 --- [main] c.d.s.SpringBootDemoApplication          : Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-01-31 14:45:54.889  INFO 12240 --- [main] c.d.s.SpringBootDemoApplication          : The following profiles are active: dev
+2018-01-31 14:45:55.378  INFO 12240 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@661972b0: startup date [Wed Jan 31 14:45:55 CST 2018]; root of context hierarchy
+2018-01-31 14:45:59.029  INFO 12240 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-01-31 14:45:59.059  INFO 12240 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-01-31 14:45:59.061  INFO 12240 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-01-31 14:45:59.348  INFO 12240 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-01-31 14:45:59.349  INFO 12240 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3977 ms
+2018-01-31 14:45:59.764  INFO 12240 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-01-31 14:45:59.777  INFO 12240 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-01-31 14:45:59.779  INFO 12240 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-01-31 14:45:59.780  INFO 12240 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-01-31 14:45:59.780  INFO 12240 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-01-31 14:46:01.694  INFO 12240 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-31 14:46:01.735  INFO 12240 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-31 14:46:01.983  INFO 12240 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-01-31 14:46:01.988  INFO 12240 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-01-31 14:46:01.993  INFO 12240 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-01-31 14:46:02.125  INFO 12240 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-31 14:46:02.419  INFO 12240 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-01-31 14:46:03.812  INFO 12240 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-01-31 14:46:04.067  INFO 12240 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-31 14:46:04.679  INFO 12240 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-01-31 14:46:06.068  INFO 12240 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@661972b0: startup date [Wed Jan 31 14:45:55 CST 2018]; root of context hierarchy
+2018-01-31 14:46:06.282  INFO 12240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[PUT]}" onto public com.djb.springbootdemo.domain.Book com.djb.springbootdemo.web.BookApp.update(long,java.lang.String,java.lang.String,java.lang.String,int)
+2018-01-31 14:46:06.286  INFO 12240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[GET]}" onto public java.util.List<com.djb.springbootdemo.domain.Book> com.djb.springbootdemo.web.BookApp.getAll()
+2018-01-31 14:46:06.288  INFO 12240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[POST]}" onto public com.djb.springbootdemo.domain.Book com.djb.springbootdemo.web.BookApp.post(java.lang.String,java.lang.String,java.lang.String,int)
+2018-01-31 14:46:06.291  INFO 12240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/{id}],methods=[GET]}" onto public com.djb.springbootdemo.domain.Book com.djb.springbootdemo.web.BookApp.getOne(long)
+2018-01-31 14:46:06.293  INFO 12240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/by],methods=[POST]}" onto public int com.djb.springbootdemo.web.BookApp.findBy(long,int,long)
+2018-01-31 14:46:06.294  INFO 12240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/{id}],methods=[DELETE]}" onto public void com.djb.springbootdemo.web.BookApp.deleteOne(long)
+2018-01-31 14:46:06.300  INFO 12240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books],methods=[GET]}" onto public java.lang.String com.djb.springbootdemo.web.BookController.list(org.springframework.ui.Model)
+2018-01-31 14:46:06.306  INFO 12240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/{id}],methods=[GET]}" onto public java.lang.String com.djb.springbootdemo.web.BookController.detail(long,org.springframework.ui.Model)
+2018-01-31 14:46:06.307  INFO 12240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books],methods=[POST]}" onto public java.lang.String com.djb.springbootdemo.web.BookController.post(com.djb.springbootdemo.domain.Book,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-01-31 14:46:06.308  INFO 12240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/{id}/input],methods=[GET]}" onto public java.lang.String com.djb.springbootdemo.web.BookController.inputEditPage(long,org.springframework.ui.Model)
+2018-01-31 14:46:06.309  INFO 12240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/books/input],methods=[GET]}" onto public java.lang.String com.djb.springbootdemo.web.BookController.inputPage(org.springframework.ui.Model)
+2018-01-31 14:46:06.318  INFO 12240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v2/books],methods=[GET]}" onto public java.lang.Object com.djb.springbootdemo.web.HelloController.getAll(int,int)
+2018-01-31 14:46:06.319  INFO 12240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v2/books],methods=[POST]}" onto public java.lang.Object com.djb.springbootdemo.web.HelloController.post(java.lang.String,java.lang.String,java.lang.String)
+2018-01-31 14:46:06.321  INFO 12240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v2/books/{id}],methods=[GET]}" onto public java.lang.Object com.djb.springbootdemo.web.HelloController.getOne(long)
+2018-01-31 14:46:06.322  INFO 12240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v2/say],methods=[POST]}" onto public java.lang.String com.djb.springbootdemo.web.HelloController.hello()
+2018-01-31 14:46:06.332  INFO 12240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-01-31 14:46:06.334  INFO 12240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-01-31 14:46:06.429  INFO 12240 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-31 14:46:06.430  INFO 12240 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-31 14:46:06.741  INFO 12240 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-31 14:46:08.372  INFO 12240 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-01-31 14:46:08.556  INFO 12240 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-01-31 14:46:08.570  INFO 12240 --- [main] c.d.s.SpringBootDemoApplication          : Started SpringBootDemoApplication in 14.453 seconds (JVM running for 17.794)
